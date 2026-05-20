@@ -1,10 +1,10 @@
 # set OS-Version 20.04 as argument
-#??
+ARG OS_VERSION=20.04
 # Get Ubuntu OS
-#??
+FROM ubuntu:${OS_VERSION}
 # run update without confirmation
-#??
+RUN apt-get update -y
 # start bash
-#??
+CMD ["bash"]
 
 
