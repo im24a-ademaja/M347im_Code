@@ -44,21 +44,21 @@ function copyFile() {
 
 case $1 in
 0)
-  TRG="~/02/ex/bin"
+  TRG="~/03/demo/bin"
   rmDir ${TRG}; createDir ${TRG}
   copyFile "./bin/td-base.sh" ${TRG}
   copyFile "./bin/*.sh" ${TRG}
   copyFile "./bin/.bash_profile" ${TRG}
   ;;
 1)
-  TRG="~/02/ex/01"
+  TRG="~/03/demo/01"
   rmDir ${TRG}; createDir ${TRG}
-  copyDir "./01" "~/02/ex/"
+  copyDir "./01" "~/03/demo/"
   ;;
 2)
-  TRG="~/02/ex/02"
+  TRG="~/03/demo/02"
   rmDir ${TRG}; createDir ${TRG}
-  copyDir "./02" "~/02/ex/"
+  copyDir "./02" "~/03/demo/"
   ;;
 *)
   echo "Incorrect choice entered!"
