@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # retrieve DEST and PRIVATE_KEY from personal configuration
-CONF='/c/Data/Development/wp_appi-repo/00_Resources/conf/aws.conf'
+CONF="../venv/aws.conf"
 # check if configuration exists
 if [ ! -f $CONF ]; then
   echo $CONF does not exist!
@@ -47,6 +47,8 @@ case $1 in
   TRG="~/02/ex/bin"
   rmDir ${TRG}; createDir ${TRG}
   copyFile "./bin/td-base.sh" ${TRG}
+  copyFile "./bin/*.sh" ${TRG}
+  copyFile "./bin/.bash_profile" ${TRG}
   ;;
 1)
   TRG="~/02/ex/01"

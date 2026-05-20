@@ -2,21 +2,21 @@
 # Containerize a simple flask deploy
 # ---------------------------------------------------------
 # Install ubuntu 18.04
-#??
+FROM ubuntu:18.04
 # Update and install python-pip,-dev and curl
 # Clean OS from installation files
-#??
-    #??
-    #??
-    #??
+RUN apt-get update -y \
+    && apt-get install -y python-pip python-dev curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 # Copy the current directory contents into the container at /app
-#??
+COPY ./deploy /index
 # Set the working directory
-#??
+WORKDIR /index
 # Install the Python packages specified in requirements.txt
-#??
+RUN pip install -r requirements.txt
 # Run the Flask app
-#??
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
 # The curl command checks (every 10s) whether the application is running or not making
 # a request to localhost:5000. If the request returns a 200, it will return exit code 0;
 # if the application crashes, it will return exit code 1.
@@ -33,4 +33,5 @@
 #           try up to the specified retry number. If the server fails consecutively up to the specified times,
 #           it is then considered unhealthy.
 # Health check to ensure the app is running
-#??
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+CMD curl --fail http://localhost:5000/ || exit 1

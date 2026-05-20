@@ -8,27 +8,34 @@ if test $# -lt 1; then
   exit 1
 fi
 
-case $1 in
-1)
+function rmCont() {
   printf "Stop and remove container %s and image %s" ${image} ${container}
   # stop container
-#??
+  docker stop ${container}
   sleep 3
-#??
-#??
-  # Remove image
-#??
-  # check removal
-#??
-  ;;
-2)
+  # remove container
+  docker rm ${container}
+}  
+function rmImg() {
   printf "Remove image %s" ${image}
   # Remove image
-#??
+  docker rmi ${image}
+  sleep 3
   # check removal of image
-#??
+  docker images | grep ${image}
+}
+
+case $1 in
+
+1)
+  rmCont
+  # Remove image
+  rmImg
+  ;;
+2)
+  rmImg
   ;;
 *)
   echo "Incorrect choice entered!"
   ;;
-esac
+  esac
