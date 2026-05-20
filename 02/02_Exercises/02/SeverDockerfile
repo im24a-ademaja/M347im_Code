@@ -1,0 +1,23 @@
+### Aufgabe: Webserver-Container
+# 1. Erstellen Sie auf Basis eines Dockerfiles ein Image mit
+#    1. Ubuntu 20.04, welches ohne Bestätigung das Betriebssystem updated
+#    2. den Webserver nginx installiert und alle Installationsdateien danach löscht
+#    3. den Port 80 offen legt
+#    4. per Default den Webserver im Vordergrund starten und mit dem Terminal 
+# 3. Listen Sie sich das erstellte Image
+# 4. Starten Sie den Container und testen mit curl, ob dieser unter localhost:80 läuft
+# 5. Stoppen Sie den laufenden Container
+# 6. Löschen anschliessend das Image und überprüfen Sie die Löschung
+#
+# Fetch OS ubuntu:20.04
+#??
+# Run update, install nginx and remove all installation files
+#??
+    #??
+    #??
+# listening (and not publishing)
+# the port 80 of the container
+#??
+# run nginx in foreground by
+# turning nginx off as a daemon
+#??

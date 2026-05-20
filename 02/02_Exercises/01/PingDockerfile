@@ -1,0 +1,22 @@
+### Aufgabe: Ping-Container
+# 1. Erstellen Sie auf Basis eines Dockerfiles ein Image mit
+#    1. Ubuntu trusty, welches gleich ohne Bestätigung das Betriebssystem updated
+#    2. ein Label mit den Attributen Creator und Version setzt
+#    3. in jedem Fall das ping-Kommando fünfmal durchführt auf localhost als Default-Host
+# 2. Für Image und Container dürfen Sie selber Werte wählen
+# 3. Listen Sie sich das erstellte Image
+# 4. Starten Sie den Container
+# 5. Stoppen Sie den laufenden Container
+# 6. Löschen anschliessend das Image und überprüfen Sie die Löschung
+#
+# Ubuntu trusty version installieren
+#??
+# label container i.e. with creator and version as key-value-pair
+#??
+# Update without confirmation (non-interactive)
+#??
+# configure container at the starting point
+# ping localhost 5 times when the container is running
+#??
+#??
+

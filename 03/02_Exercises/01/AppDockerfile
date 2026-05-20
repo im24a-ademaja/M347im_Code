@@ -1,0 +1,27 @@
+# Implement docker healthcheck and stopsignal using dockerfile
+# Containerize a simple flask deploy
+# ---------------------------------------------------------
+# Install ubuntu 18.04
+#??
+# Update and install python-pip,-dev and curl
+# Clean OS from installation files
+#??
+    #??
+    #??
+    #??
+# Copy the current directory contents into the container at /app
+#??
+# Set the working directory
+#??
+# Install the Python packages specified in requirements.txt
+#??
+# Make port 3000 available to the world outside this container
+#??
+# set environment variable FLASK_APP
+#??
+
+# Run the Flask app
+#??
+
+# Health check to ensure the app is running
+#??

@@ -1,0 +1,36 @@
+# Implement docker healthcheck and stopsignal using dockerfile
+# Containerize a simple flask deploy
+# ---------------------------------------------------------
+# Install ubuntu 18.04
+#??
+# Update and install python-pip,-dev and curl
+# Clean OS from installation files
+#??
+    #??
+    #??
+    #??
+# Copy the current directory contents into the container at /app
+#??
+# Set the working directory
+#??
+# Install the Python packages specified in requirements.txt
+#??
+# Run the Flask app
+#??
+# The curl command checks (every 10s) whether the application is running or not making
+# a request to localhost:5000. If the request returns a 200, it will return exit code 0;
+# if the application crashes, it will return exit code 1.
+# Interval - specifies the time between the health check for the application container.
+#           it waits for the specified time from one check to another.
+# Timeout - specifies the time that the health check waits
+#           for a response to consider the status of the container.
+#           For example, if we define 30 seconds and our server doesn’t respond within 30 seconds,
+#           then it’s considered as failed.
+# Start-period - specifies the number of seconds the container needs to start;
+#           health check will wait for that time to start.
+# Retries - specifies the number of consecutive health check failures
+#           required to declare the container status as unhealthy. Health check will only
+#           try up to the specified retry number. If the server fails consecutively up to the specified times,
+#           it is then considered unhealthy.
+# Health check to ensure the app is running
+#??
