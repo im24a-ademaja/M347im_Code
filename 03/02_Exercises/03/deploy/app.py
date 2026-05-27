@@ -19,7 +19,7 @@ def set_termin():
     if request.method == "POST":
         return jsonify({"message": "Termine setzen ist noch nicht implementiert!"})
 
-
+# when no port is defined then default port is 5000!
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
 

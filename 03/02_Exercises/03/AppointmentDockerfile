@@ -21,4 +21,6 @@
 # Check every 10s if curl fails requesting the url.
 # If it fails then restart the container
 #??
+# when no app-port is defined then default port is 5000!
+#??
 #??

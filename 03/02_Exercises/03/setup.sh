@@ -17,3 +17,4 @@
 #??
 # Run image with specific name
 #??
+docker run --restart always --name ${container} -p 5000:5000 ${image}
