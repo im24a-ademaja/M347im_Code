@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # retrieve DEST and PRIVATE_KEY from personal configuration
-CONF="../venv/aws.conf"
+CONF="../../venv/aws.conf"
 # check if configuration exists
 if [ ! -f $CONF ]; then
   echo $CONF does not exist!
