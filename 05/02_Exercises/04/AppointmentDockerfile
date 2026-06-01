@@ -1,0 +1,25 @@
+# Implement docker healthcheck and stopsignal using dockerfile
+# Containerize a simple flask deploy
+# ---------------------------------------------------------
+# Install ubuntu 18.04
+#??
+# Update and install python-pip,-dev and curl
+# Clean OS from installation files
+#??
+    #??
+    #??
+    #??
+
+#??
+#??
+# Copy /deploy directory contents into the container at /app
+#??
+# Set the working directory
+#??
+# Install the Python packages specified in requirements.txt
+#??
+# Check every 10s if curl fails requesting the url.
+# If it fails then restart the container
+#??
+#??
+
