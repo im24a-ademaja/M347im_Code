@@ -1,19 +1,22 @@
 #!/bin/bash
 #
 # Load configuration
-#??
-# check if configuration exists
-#??
-#??
-  # print error message and exit script
-#??
-#??
-#??
+CONF="param.conf"
+if [ ! -f "$CONF" ]; then
+    printf "%s does not exist.\nExit script!\n" "$CONF"
+    exit 1
+fi
+
 # import configuration
-#??
+source "$CONF"
+
 # Build a dockerfile with tag -t
-#??
+docker build -t "$image" -f "$file" .
+
 # List images
-#??
-# Run image with specific name
-#??
+docker images
+
+# Run the Docker container with auto-restart policy
+docker run -d --restart unless-stopped --name "$container" -p 3000:3000 "$image"
+
+docker ps
