@@ -27,7 +27,7 @@ docker-compose.yaml
 ```
 docker-compose up -d
 # or
-docker-compose -f <CUSTOM-FILE>.yaml
+docker-compose -f <CUSTOM-FILE>.yaml up -d
 ```
 3. Check the created containers
 ```
