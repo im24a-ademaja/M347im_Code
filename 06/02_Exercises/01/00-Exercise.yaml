@@ -1,0 +1,66 @@
+# Aufgabe 1: Blog-Seite mit Wordpress und MySQL erstellen
+#1. Studieren Sie die Demonstration aus dem heutigen Input
+#2. Erstellen Sie eine Multi-Container-Anwendung mit Wordpress und MySQL
+#3. Versuchen Sie eigenen Blog-Eintrag mit einer Seite und einem fiktiven Kommentar zu erstellen.
+#4. Als Login verwenden Sie <IhrKürzel>
+#5. Auf der Blogseite verwenden Sie <IhrKürzel>
+#6. Überprüfen Sie die letzten 15 Log-Einträge der Container.
+#7. Stoppen Sie den Container und geben Sie den Inhalt einer Log-Datei aus
+#8. Löschen Sie alle erzeugten Ressourcen, um Seiteneffekte für neue Übungen zu vermeiden
+#9. Run docker compose as follows: docker-compose -f a01.yaml up -d
+#
+#
+# Services
+services:
+  # Service database
+  db:
+    # set mysql as image
+#??
+    # set container name
+#??
+    # set volumes for db_data
+    volumes:
+#??
+    # restart always
+#??
+    # set mysql root and standard password,
+    # database and user as environment
+    environment:
+#??
+#??
+#??
+#??
+
+  # Service word press
+  wordpress:
+    # depends on database service
+    depends_on:
+#??
+    # set word press as image
+#??
+    # set container name
+#??
+    # set volumes for wordpress_files
+    volumes:
+#??
+    # set port inbound to 80, outbound to 8000
+    ports:
+#??
+    # restart always
+#??
+    # set word press database-host, -user and -password
+    # database and user as environment
+    environment:
+#??
+#??
+#??
+
+# used volumes are
+#  wordpress_files and
+#  db_data
+volumes:
+#??
+#??
+
+
+
